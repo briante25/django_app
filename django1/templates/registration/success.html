@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成功註冊</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5em;
+            display: flex;
+            height: 50px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            position: relative;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:not(:last-child)::after {
+            content: "|"; 
+            color: #fff;
+            margin: 0 -2px; 
+            position: absolute;
+            right: 0;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid #fff; 
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em;
+        }
+
+        .register-link{
+            text-align: center;
+        }
+
+        .links a {
+            color: #333;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>mysite</h1>
+        </div>
+        <nav>
+            <a href="{% url 'home' %}">首頁</a>
+            <a href="#">關於</a>
+            <a href="#">聯絡我們</a>
+            <a href="{% url 'login' %}">登入</a>
+            <a href="{% url 'register' %}">註冊</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>註冊成功！</h2>
+        <p>感謝您的註冊，歡迎加入我們的網站！</p>
+        </form>
+
+        <div class="links">
+            <div class="register-link">
+                <a href="{% url 'login' %}">前往登入</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 mysite. 保留所有權利.
+    </footer>
+</body>
+
+</html>
